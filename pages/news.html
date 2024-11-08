@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tin Tức - Học Tập Trực Tuyến</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+    <style>
+        /* body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 20px;
+        }
+        header {
+            background: #6200ea;
+            color: white;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        } */
+        .tabs-container {
+            display: flex;
+            gap: 20px;
+        }
+        .tab {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .tab:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+        .news-banner {
+            text-align: center;
+            margin: 20px 0;
+            padding: 30px;
+            background: url('../assets/images/news-banner.jpg') no-repeat center center/cover;
+            color: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+        }
+        .news-banner h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        .news-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .news-item {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s;
+        }
+        .news-item:hover {
+            transform: translateY(-5px);
+        }
+        .news-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .news-content {
+            padding: 15px;
+        }
+        .news-content h3 {
+            margin: 10px 0;
+            color: #6200ea;
+        }
+        .news-content p {
+            color: #555;
+        }
+        .news-content .read-more {
+            display: inline-block;
+            margin-top: 10px;
+            color: #6200ea;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+        .news-content .read-more:hover {
+            color: #3700b3;
+        }
+        footer {
+            margin-top: 30px;
+            padding: 20px;
+            background: #6200ea;
+            color: white;
+            text-align: center;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="profile-container">
+                <a href="user-profile.html">
+                    <img src="../assets/images/avatar.jpg" alt="Avatar" class="avatar" style="border-radius: 50%; width: 60px; height: 60px;">
+                </a>
+                <span class="welcome-text">Welcome, Nguyen Xuan Dai</span>
+            </div>
+            <div class="tabs-container">
+                <a href="index.html" class="tab">Home</a>
+                <a href="news.html" class="tab">News</a>
+                <a href="about.html" class="tab">About</a>
+                <a href="contact.html" class="tab">Contact</a>
+            </div>
+            <div class="button-login">
+                <a href="login.html" class="btn">Login</a>
+            </div>
+        </div>
+        <nav class="navbar">
+            <ul>
+                <li><a href="#business">Quản Lý Doanh Nghiệp</a></li>
+                <li><a href="#cloud">Điện Toán Đám Mây</a></li>
+                <li><a href="#cybersecurity">An Ninh Mạng</a></li>
+                <li><a href="#data-science">Khoa Học Dữ Liệu</a></li>
+                <li><a href="#development">Phát Triển</a></li>
+                <li><a href="#it-operations">Vận Hành CNTT</a></li>
+                <li><a href="#language-learning">Học Ngoại Ngữ</a></li>
+                <li><a href="#leadership">Lãnh Đạo & Quản Lý</a></li>
+                <li><a href="#marketing">Tiếp Thị</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="news-banner">
+            <h1>Tin Tức Mới Nhất</h1>
+            <p>Cập nhật tin tức về các khóa học và sự kiện mới nhất.</p>
+        </div>
+
+        <div class="news-list">
+            <div class="news-item">
+                <img src="../assets/images/news1.jpg" alt="News 1">
+                <div class="news-content">
+                    <h3>Tin Tức Khóa Học Mới</h3>
+                    <p>Khóa học về Khoa Học Dữ Liệu sẽ được khai giảng vào tháng tới. Đăng ký ngay!</p>
+                    <a href="#" class="read-more">Đọc thêm</a>
+                </div>
+            </div>
+            <div class="news-item">
+                <img src="../assets/images/news2.jpg" alt="News 2">
+                <div class="news-content">
+                    <h3>Hội Thảo Online Về An Ninh Mạng</h3>
+                    <p>Tham gia hội thảo trực tuyến với các chuyên gia hàng đầu trong lĩnh vực An Ninh Mạng.</p>
+                    <a href="#" class="read-more">Đọc thêm</a>
+                </div>
+            </div>
+            <div class="news-item">
+                <img src="../assets/images/news3.jpg" alt="News 3">
+                <div class="news-content">
+                    <h3>Giới Thiệu Giảng Viên Mới</h3>
+                    <p>Chúng tôi vui mừng giới thiệu giảng viên mới với nhiều kinh nghiệm trong ngành.</p>
+                    <a href="#" class="read-more">Đọc thêm</a>
+                </div>
+            </div>
+            <!-- Thêm nhiều tin tức khác -->
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Học Tập Trực Tuyến. Tất cả quyền được bảo lưu.</p>
+        <p>
+            <a href="#" style="color: white; text-decoration: underline;">Chính sách bảo mật</a> |
+            <a href="#" style="color: white; text-decoration: underline;">Điều khoản dịch vụ</a>
+        </p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+</body>
+</html>

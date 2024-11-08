@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giới Thiệu - Học Tập Trực Tuyến</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="profile-container">
+                <a href="user-profile.html">
+                    <img src="../assets/images/avatar.jpg" alt="Avatar" class="avatar">
+                </a>
+                <span class="welcome-text">Welcome, Nguyen Xuan Dai</span>
+            </div>
+            <div class="tabs-container">
+                <a href="index.html" class="tab">Home</a>
+                <a href="news.html" class="tab">News</a>
+                <a href="about.html" class="tab active">About</a>
+                <a href="contact.html" class="tab">Contact</a>
+            </div>
+            <div class="search-container">
+                <input type="text" placeholder="Tìm kiếm khóa học..." aria-label="Search">
+                <button type="submit">Tìm</button>
+            </div>
+            <div class="button-login">
+                <a href="login.html" class="btn">Login</a>
+            </div>
+        </div>
+        <nav class="navbar">
+            <ul>
+                <li><a href="#business">Quản Lý Doanh Nghiệp</a></li>
+                <li><a href="#cloud">Điện Toán Đám Mây</a></li>
+                <li><a href="#cybersecurity">An Ninh Mạng</a></li>
+                <li><a href="#data-science">Khoa Học Dữ Liệu</a></li>
+                <li><a href="#development">Phát Triển</a></li>
+                <li><a href="#it-operations">Vận Hành CNTT</a></li>
+                <li><a href="#language-learning">Học Ngoại Ngữ</a></li>
+                <li><a href="#leadership">Lãnh Đạo & Quản Lý</a></li>
+                <li><a href="#marketing">Tiếp Thị</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="banner">
+            <h2>Giới Thiệu Về Chúng Tôi</h2>
+        </div>
+
+        <section class="about-section">
+            <article class="about-item">
+                <h2>Về Chúng Tôi</h2>
+                <p>Học Tập Trực Tuyến là nền tảng học trực tuyến hàng đầu, cung cấp các khóa học chất lượng cao từ giảng viên uy tín.</p>
+            </article>
+
+            <article class="about-item">
+                <h2>Sứ Mệnh</h2>
+                <p>Sứ mệnh của chúng tôi là giúp mọi người tiếp cận kiến thức dễ dàng và hiệu quả hơn thông qua công nghệ.</p>
+            </article>
+
+            <article class="about-item">
+                <h2>Đội Ngũ Của Chúng Tôi</h2>
+                <div class="team-container">
+                    <div class="team-member">
+                        <img src="../assets/images/team1.jpg" alt="Đội ngũ 1">
+                        <h3>Nguyễn Văn A</h3>
+                        <p>Giảng viên chuyên ngành CNTT</p>
+                    </div>
+                    <div class="team-member">
+                        <img src="../assets/images/team2.jpg" alt="Đội ngũ 2">
+                        <h3>Trần Thị B</h3>
+                        <p>Chuyên gia giáo dục trực tuyến</p>
+                    </div>
+                    <div class="team-member">
+                        <img src="../assets/images/team3.jpg" alt="Đội ngũ 3">
+                        <h3>Phạm Văn C</h3>
+                        <p>Nhà phát triển phần mềm</p>
+                    </div>
+                </div>
+            </article>
+        </section>
+
+        <div class="share-buttons">
+            <button onclick="share('facebook')">Chia sẻ trên Facebook</button>
+            <button onclick="share('twitter')">Chia sẻ trên Twitter</button>
+        </div>
+
+        <button class="back-to-top" onclick="scrollToTop()">Quay lại đầu trang</button>
+    </main>
+
+    <footer>
+        <div class="contact-info">
+            <p>Địa chỉ: 123 Đường ABC, Thành phố XYZ</p>
+            <p>Số điện thoại: 0123 456 789</p>
+            <p>
+                <a href="#">Facebook</a> |
+                <a href="#">Instagram</a>
+            </p>
+        </div>
+        <div class="footer-links">
+            <a href="#">Chính sách bảo mật</a>
+            <a href="#">Điều khoản dịch vụ</a>
+        </div>
+        <p>&copy; 2024 Học Tập Trực Tuyến. Tất cả quyền được bảo lưu.</p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script src="../js/script.js"></script>
+    <script>
+        function share(platform) {
+            // Chia sẻ lên mạng xã hội
+            alert("Chia sẻ lên " + platform);
+        }
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>

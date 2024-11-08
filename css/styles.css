@@ -1,0 +1,542 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f4f4;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+
+.search-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.search-container input {
+    padding: 10px;
+    width: 300px;
+}
+
+.search-container button {
+    padding: 10px 15px;
+    background-color: #2196F3;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.search-container button:hover {
+    background-color: #1976D2;
+}
+
+.header-container {
+    display: flex; /* Sử dụng Flexbox để sắp xếp các phần tử */
+    justify-content: space-between; /* Phân bố không gian giữa các phần tử */
+    align-items: center; /* Căn giữa theo chiều dọc */
+    padding: 15px 20px; /* Thêm khoảng cách bên trong */
+    background-color: #4CAF50; /* Màu nền của header */
+    color: white; /* Màu chữ */
+}
+
+.profile-container {
+    display: flex; /* Sắp xếp các phần tử bên cạnh nhau */
+    align-items: center; /* Căn giữa theo chiều dọc */
+}
+
+.avatar {
+    width: 40px; /* Chiều rộng ảnh đại diện */
+    height: 40px; /* Chiều cao ảnh đại diện */
+    border-radius: 50%; /* Bo tròn ảnh đại diện */
+    margin-right: 10px; /* Khoảng cách bên phải ảnh đại diện */
+}
+
+.welcome-text {
+    font-size: 1em; /* Kích thước chữ */
+}
+
+.search-container {
+    display: flex; /* Sắp xếp các phần tử bên cạnh nhau */
+}
+
+.search-container input {
+    padding: 10px; /* Khoảng cách bên trong */
+    width: 300px; /* Chiều rộng */
+    border: none; /* Không viền */
+    border-radius: 5px; /* Bo tròn góc */
+}
+
+.search-container button {
+    padding: 10px 15px; /* Khoảng cách bên trong */
+    background-color: #2196F3; /* Màu nền */
+    color: white; /* Màu chữ */
+    border: none; /* Không viền */
+    border-radius: 5px; /* Bo tròn góc */
+    cursor: pointer; /* Con trỏ kiểu tay */
+}
+
+.search-container button:hover {
+    background-color: #1976D2; /* Màu khi hover */
+}
+
+.button-login {
+    margin-left: 20px; /* Khoảng cách giữa thanh tìm kiếm và nút đăng nhập */
+}
+
+.btn {
+    padding: 10px 15px; /* Khoảng cách bên trong */
+    background-color: #4CAF50; /* Màu nền */
+    color: white; /* Màu chữ */
+    text-decoration: none; /* Không gạch chân */
+    border-radius: 5px; /* Bo tròn các góc */
+}
+
+.btn:hover {
+    background-color: #45a049; /* Màu khi hover */
+}
+
+.navbar {
+    margin-top: 10px; /* Khoảng cách giữa header và navbar */
+}
+
+.navbar ul {
+    list-style-type: none; /* Loại bỏ dấu chấm đầu dòng */
+    padding: 0; /* Loại bỏ khoảng cách mặc định */
+    display: flex; /* Sử dụng Flexbox để sắp xếp các mục */
+    justify-content: center; /* Canh giữa các mục */
+}
+
+.navbar li {
+    margin: 0 15px; /* Khoảng cách giữa các mục */
+}
+
+.navbar a {
+    color: white; /* Màu chữ */
+    text-decoration: none; /* Không gạch chân */
+}
+
+.navbar a:hover {
+    text-decoration: underline; /* Gạch chân khi hover */
+}
+
+
+/* .navbar ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar li {
+    margin: 0 15px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+}
+
+.navbar a:hover {
+    text-decoration: underline;
+} */
+
+main {
+    margin-top: 20px;
+}
+
+/* .banner {
+    position: relative;
+    margin-top: 20px;
+} */
+
+
+/* .carousel {
+    position: relative;
+    overflow: hidden;
+}
+
+.carousel img {
+    width: 100%;
+    height: auto;
+    animation: fade 10s infinite;
+} */
+
+@font-face {
+    font-family: "ja-med";
+    src: url("https://cdn.jsdelivr. net/gh/codetheworld-io/ static-files/ja-med.otf");
+}
+
+/* banner */
+.banner-container {
+    position: relative;
+    width: au;
+    height: 500px;
+    display: grid;
+    font-family: "ja-med", sans-serif;
+}
+
+.box {
+    position: relative;
+    background: var(--img)center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: all 400ms;
+    display: flex;
+    justify-content: center;
+}
+
+.banner-container {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    gap: 1em;
+    transition: all 400ms;
+}
+
+.banner-container:hover .box {
+    filter: grayscale(0%) opacity(100%);
+}
+
+.banner-container {
+    --layout-1: 3fr 1fr 1fr 1fr 1fr;
+    --layout-2: 1fr 3fr 1fr 1fr 1fr;
+    --layout-3: 1fr 1fr 3fr 1fr 1fr;
+    --layout-4: 1fr 1fr 1fr 3fr 1fr;
+    --layout-5: 1fr 1fr 1fr 1fr 3fr;
+
+    &:has(.box-1:hover){
+        grid-template-columns: var(--layout-1);
+    }
+    &:has(.box-2:hover){
+        grid-template-columns: var(--layout-2);
+    }
+    &:has(.box-3:hover){
+        grid-template-columns: var(--layout-3);
+    }
+    &:has(.box-4:hover){
+        grid-template-columns: var(--layout-4);
+    }
+    &:has(.box-5:hover){
+        grid-template-columns: var(--layout-5);
+    }
+}
+
+.box {
+    &:nth-child(old) {
+        transform: translateY(-16px);
+    }
+    &:nth-child(even) {
+        transform: translateY(16px);
+    }
+    &::after {
+        content: attr(data-text);
+        position: absolute;
+        font-size: large;
+        color: #fff;
+        background: #000;
+        bottom: 20px;
+        padding: 10px 10px 10px 14px;
+        letter-spacing: uppercase;
+        transition: all 400ms;
+        transform: translateY(60px);
+        opacity: 0;
+    }
+    &:hover::after {
+        transform: translateY(0);
+        opacity: 1;
+        transition-delay: 200ms;
+    }
+}
+
+@keyframes fade {
+    0% { opacity: 0; }
+    10% { opacity: 1; }
+    20% { opacity: 1; }
+    30% { opacity: 0; }
+}
+
+.cta-button {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 15px 30px;
+    background-color: #ff5733;
+    color: white;
+    border: none;
+    font-size: 1.5em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #e03e2d;
+}
+
+.category-container, .featured-courses {
+    background: white;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.category-container h2, .featured-courses h2 {
+    margin-top: 0;
+}
+
+.categories {
+    display: flex;
+    justify-content: space-around;
+}
+
+.category-item {
+    text-align: center;
+    margin: 10px;
+}
+
+.category-item h3 {
+    display: flex;
+    align-items: center;
+}
+
+.category-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+}
+
+.category-item:hover {
+    transform: scale(1.05);
+    background-color: #f0f0f0;
+}
+
+.rating {
+    color: #ffcc00;
+    font-size: 1.2em;
+}
+
+.course-card {
+    text-align: center;
+    margin: 10px;
+}
+
+.course-card img {
+    width: 25%;
+    height: auto;
+}
+
+.course-card button {
+    padding: 10px 15px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.course-card button img {
+    width: 16px;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+.course-card button:hover {
+    background-color: #45a049;
+}
+
+footer {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.9em;
+}
+
+.contact-info {
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    margin: 0 10px;
+    color: #4CAF50;
+    text-decoration: none;
+}
+
+.tabs {
+    margin: 20px 0;
+}
+
+.tabs button {
+    margin: 0 10px;
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.tabs button:hover {
+    background-color: #45a049;
+}
+
+@media (max-width: 768px) {
+    .banner img {
+        height: auto;
+    }
+
+    .carousel img {
+        height: 200px; /* Thay đổi chiều cao cho di động */
+    }
+
+    .categories {
+        flex-direction: column; /* Xếp theo chiều dọc */
+    }
+}
+
+h2 {
+    font-weight: 500; /* Thay đổi độ dày chữ */
+    margin-bottom: 15px; /* Tăng khoảng cách dưới */
+}
+
+p {
+    line-height: 1.6; /* Cải thiện độ đọc */
+    margin-bottom: 15px; /* Tăng khoảng cách giữa các đoạn văn */
+}
+
+.suggestions {
+    border: 1px solid #ccc;
+    background-color: white;
+    position: absolute;
+    z-index: 1000;
+    width: 300px;
+    max-height: 150px;
+    overflow-y: auto;
+}
+
+.suggestion-item {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.suggestion-item:hover {
+    background-color: #f0f0f0;
+}
+
+.tab-button {
+    margin: 0 10px;
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.tab-button:hover {
+    background-color: #45a049;
+}
+
+.tab-content {
+    display: none; /* Giấu nội dung các tab */
+}
+
+.tab-content.active {
+    display: block; /* Hiện nội dung tab được chọn */
+}
+
+/* style trang user-profile */
+.profile-details {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.tabs {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.tab-button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+    margin: 0 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.tab-button:hover {
+    background-color: #45a049;
+}
+
+.tab-content {
+    display: none;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 10px;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+.course-card {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.course-card img {
+    width: 25%;
+    border-radius: 5px;
+}
+
+.course-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.courses-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.footer {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.9em;
+    background: #f4f4f4;
+    padding: 20px;
+    border-top: 1px solid #ccc;
+}
+
+/* css tab */
+.tabs-container {
+    display: flex;
+    align-items: center;
+}
+
+.tab {
+    padding: 10px 15px;
+    margin-right: 15px;
+    color: white;
+    text-decoration: none;
+    transition: background-color 0.3s;
+    border-radius: 5px;
+}
+
+.tab:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+

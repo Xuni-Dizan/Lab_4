@@ -1,0 +1,14 @@
+[
+    {
+        "id": 1,
+        "title": "Khóa Học An Ninh Thông Tin",
+        "image": "course1.jpg",
+        "rating": 4.5
+    },
+    {
+        "id": 2,
+        "title": "Khóa Học Về Tiếng Anh",
+        "image": "course2.jpg",
+        "rating": 4.8
+    }
+]

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liên Hệ - Học Tập Trực Tuyến</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="profile-container">
+                <a href="user-profile.html">
+                    <img src="../assets/images/avatar.jpg" alt="Avatar" class="avatar">
+                </a>
+                <span class="welcome-text">Welcome, Nguyen Xuan Dai</span>
+            </div>
+            <div class="tabs-container">
+                <a href="index.html" class="tab">Home</a>
+                <a href="news.html" class="tab">News</a>
+                <a href="about.html" class="tab">About</a>
+                <a href="contact.html" class="tab active">Contact</a>
+            </div>
+            <div class="search-container">
+                <input type="text" placeholder="Tìm kiếm khóa học..." aria-label="Search">
+                <button type="submit">Tìm</button>
+            </div>
+            <div class="button-login">
+                <a href="login.html" class="btn">Login</a>
+            </div>
+        </div>
+        <nav class="navbar">
+            <ul>
+                <li><a href="#business">Quản Lý Doanh Nghiệp</a></li>
+                <li><a href="#cloud">Điện Toán Đám Mây</a></li>
+                <li><a href="#cybersecurity">An Ninh Mạng</a></li>
+                <li><a href="#data-science">Khoa Học Dữ Liệu</a></li>
+                <li><a href="#development">Phát Triển</a></li>
+                <li><a href="#it-operations">Vận Hành CNTT</a></li>
+                <li><a href="#language-learning">Học Ngoại Ngữ</a></li>
+                <li><a href="#leadership">Lãnh Đạo & Quản Lý</a></li>
+                <li><a href="#marketing">Tiếp Thị</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="banner">
+            <h2>Liên Hệ Với Chúng Tôi</h2>
+        </div>
+
+        <section class="contact-section">
+            <article class="contact-info">
+                <h2>Thông Tin Liên Hệ</h2>
+                <p><strong>Địa chỉ:</strong> 123 Đường ABC, Thành phố XYZ</p>
+                <p><strong>Số điện thoại:</strong> 0123 456 789</p>
+                <p><strong>Email:</strong> support@hoctaptructuyen.vn</p>
+                <div class="social-media">
+                    <h3>Kết Nối Với Chúng Tôi</h3>
+                    <a href="#">Facebook</a> |
+                    <a href="#">Instagram</a>
+                </div>
+            </article>
+
+            <article class="contact-form">
+                <h2>Gửi Thông Điệp</h2>
+                <form action="#" method="POST">
+                    <label for="name">Họ và Tên:</label>
+                    <input type="text" id="name" name="name" required>
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="message">Nội dung:</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+
+                    <button type="submit" class="btn">Gửi</button>
+                </form>
+            </article>
+        </section>
+
+        <section class="map-section">
+            <h2>Vị Trí Của Chúng Tôi</h2>
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.8354345098007!2d144.95373531531668!3d-37.816279979751184!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f1b44fb%3A0x5045675218ceed30!2s123%20%C4%90%C6%B0%E1%BB%9Dng%20ABC%2C%20Th%C3%A0nh%20ph%E1%BB%9B%20XYZ!5e0!3m2!1svi!2s!4v1633614475241!5m2!1svi!2s" 
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </section>
+
+        <button class="back-to-top" onclick="scrollToTop()">Quay lại đầu trang</button>
+    </main>
+
+    <footer>
+        <div class="contact-info">
+            <p>Địa chỉ: 123 Đường ABC, Thành phố XYZ</p>
+            <p>Số điện thoại: 0123 456 789</p>
+            <p>
+                <a href="#">Facebook</a> |
+                <a href="#">Instagram</a>
+            </p>
+        </div>
+        <div class="footer-links">
+            <a href="#">Chính sách bảo mật</a>
+            <a href="#">Điều khoản dịch vụ</a>
+        </div>
+        <p>&copy; 2024 Học Tập Trực Tuyến. Tất cả quyền được bảo lưu.</p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script src="../js/script.js"></script>
+    <script>
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Học Tập Trực Tuyến</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+        <div class="profile-container">
+            <a href="user-profile.html">
+                <img src="../assets/images/avatar.jpg" alt="Avatar" class="avatar">
+            </a>
+            <span class="welcome-text">Welcome, Nguyen Xuan Dai</span>
+        </div>
+        <!-- <nav class="nav-tab">
+            <ul>
+                <li class="nav-item active">
+                    <a href="index.html" class="tab">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="news.html" class="tab">News</a>
+                </li>
+                <li class="nav-item"></li>
+                    <a href="about.html" class="tab">About</a>
+                <li class="nav-item">
+                    <a href="contact.html" class="tab">Contact</a>
+                </li>
+            </ul>
+            <div class="slider"></div>
+        </nav> -->
+        <div class="tabs-container">
+            <a href="index.html" class="tab">Home</a>
+            <a href="news.html" class="tab">News</a>
+            <a href="about.html" class="tab">About</a>
+            <a href="contact.html" class="tab">Contact</a>
+        </div>
+        <div class="search-container">
+            <input type="text" placeholder="Tìm kiếm khóa học..." aria-label="Search">
+            <button type="submit">Tìm</button>
+        </div>
+        <div class="button-login">
+            <a href="login.html" class="btn">Login</a>
+        </div>
+    </div>
+        <nav class="navbar">
+            <ul>
+                <li><a href="#business">Quản Lý Doanh Nghiệp</a></li>
+                <li><a href="#cloud">Điện Toán Đám Mây</a></li>
+                <li><a href="#cybersecurity">An Ninh Mạng</a></li>
+                <li><a href="#data-science">Khoa Học Dữ Liệu</a></li>
+                <li><a href="#development">Phát Triển</a></li>
+                <li><a href="#it-operations">Vận Hành CNTT</a></li>
+                <li><a href="#language-learning">Học Ngoại Ngữ</a></li>
+                <li><a href="#leadership">Lãnh Đạo & Quản Lý</a></li>
+                <li><a href="#marketing">Tiếp Thị</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="banner">
+            <h2>Giảng viên hot, nổi tiếng và uy tín đến từ nhiều quốc gia</h2>
+            <!-- <div class="banner-button">
+                <button class="cta-button">Khám Phá Ngay!</button>
+            </div> -->
+        </div>
+        <div class="banner-container">
+            <div class="box box-1" 
+            style="--img: url(../assets/images/banner1.jpg);" data-text="Giảng viên 1"></div>
+            <div class="box box-2" 
+            style="--img: url(../assets/images/banner2.jpg);" data-text="Giảng viên 2"></div>
+            <div class="box box-3" 
+            style="--img: url(../assets/images/banner3.jpg);" data-text="Giảng viên 3"></div>
+            <div class="box box-4" 
+            style="--img: url(../assets/images/banner4.jpg);" data-text="Giảng viên 4"></div>
+            <div class="box box-5" 
+            style="--img: url(../assets/images/banner5.jpg);" data-text="Giảng viên 4"></div>
+        </div>
+
+        <div class="category-container">
+            <h2>Các Danh Mục Khóa Học</h2>
+            <div class="categories">
+                <div class="category-item">
+                    <img src="../assets/images/business.jpg" alt="Business">
+                    <h3><img src="../assets/icons/business-icon.png" alt="Icon" class="category-icon"> Quản Lý Doanh Nghiệp</h3>
+                </div>
+                <div class="category-item">
+                    <img src="../assets/images/cloud.jpg" alt="Cloud Computing">
+                    <h3><img src="../assets/icons/cloud-icon.png" alt="Icon" class="category-icon"> Điện Toán Đám Mây</h3>
+                </div>
+                <!-- Thêm các danh mục khác -->
+            </div>
+        </div>
+
+        <div class="featured-courses">
+            <h2>Khóa Học Đề Xuất</h2>
+            <div class="course-card">
+                <img src="../assets/images/course1.jpg" alt="Khóa Học 1">
+                <h3>Khóa Học An Ninh Thông Tin</h3>
+                <p class="rating">⭐️⭐️⭐️⭐️☆</p>
+                <button onclick="startCourse('Khóa Học An Ninh Thông Tin')">
+                    <img src="../assets/icons/play-icon1.png" alt="Play"> Bắt đầu
+                </button>
+            </div>
+            <!-- Thêm các khóa học khác -->
+        </div>
+    </main>
+
+    <footer>
+        <div class="contact-info">
+            <p>Địa chỉ: 123 Đường ABC, Thành phố XYZ</p>
+            <p>Số điện thoại: 0123 456 789</p>
+            <p>
+                <a href="#">Facebook</a> |
+                <a href="#">Instagram</a>
+            </p>
+        </div>
+        <div class="footer-links">
+            <a href="#">Chính sách bảo mật</a>
+            <a href="#">Điều khoản dịch vụ</a>
+        </div>
+        <p>&copy; 2024 Học Tập Trực Tuyến. Tất cả quyền được bảo lưu.</p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script src="../js/script.js"></script>
+</body>
+</html>
+
+
+
+
+

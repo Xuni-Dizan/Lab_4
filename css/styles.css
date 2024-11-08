@@ -175,7 +175,7 @@ main {
 /* banner */
 .banner-container {
     position: relative;
-    width: au;
+    width: 100%;
     height: 500px;
     display: grid;
     font-family: "ja-med", sans-serif;

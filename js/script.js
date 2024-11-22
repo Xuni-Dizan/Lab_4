@@ -5,31 +5,35 @@ document.addEventListener("DOMContentLoaded", () => {
     const startCourseButtons = document.querySelectorAll('.start-course-btn');
 
     // Tìm kiếm với AJAX
-    searchInput.addEventListener('input', function () {
-        const query = this.value;
-        if (query.length > 0) {
-            fetch('courses.json')
-                .then(response => response.json())
-                .then(data => {
-                    suggestions.innerHTML = '';
-                    const filteredCourses = data.filter(course => course.name.toLowerCase().includes(query.toLowerCase()));
-                    filteredCourses.forEach(course => {
-                        const suggestionItem = document.createElement('div');
-                        suggestionItem.textContent = course.name;
-                        suggestionItem.classList.add('suggestion-item');
-                        suggestionItem.onclick = () => {
-                            searchInput.value = course.name;
-                            suggestions.innerHTML = '';
-                        };
-                        suggestions.appendChild(suggestionItem);
+    if (searchInput) {
+        searchInput.addEventListener('input', function () {
+            const query = this.value;
+            if (query.length > 0) {
+                fetch('courses.json')
+                    .then(response => response.json())
+                    .then(data => {
+                        suggestions.innerHTML = '';
+                        const filteredCourses = data.filter(course => course.name.toLowerCase().includes(query.toLowerCase()));
+                        filteredCourses.forEach(course => {
+                            const suggestionItem = document.createElement('div');
+                            suggestionItem.textContent = course.name;
+                            suggestionItem.classList.add('suggestion-item');
+                            suggestionItem.onclick = () => {
+                                searchInput.value = course.name;
+                                suggestions.innerHTML = '';
+                            };
+                            suggestions.appendChild(suggestionItem);
+                        });
                     });
-                });
-        } else {
-            suggestions.innerHTML = '';
-        }
-    });
-
-    searchButton.addEventListener('click', performSearch);
+            } else {
+                suggestions.innerHTML = '';
+            }
+        });
+    }
+    
+    if (searchButton) {
+        searchButton.addEventListener('click', performSearch);
+    }
     searchInput.addEventListener('keypress', function (e) {
         if (e.key === 'Enter') {
             performSearch();
@@ -107,12 +111,18 @@ let forgotPasswordLink = document.querySelector('.forgot-password');
 let users = JSON.parse(localStorage.getItem("users")) || []; // Lấy danh sách người dùng từ localStorage
 
 // Chuyển đổi giữa đăng ký và đăng nhập
-login.onclick = function() {
-  container.classList.add("signinForm");
-};
-create.onclick = function() {
-  container.classList.remove("signinForm");
-};
+if (login) {
+    login.onclick = function() {
+      container.classList.add("signinForm");
+    };
+  }
+  
+  if (create) {
+    create.onclick = function() {
+      container.classList.remove("signinForm");
+    };
+  }
+  
 
 // Hàm để xác thực người dùng
 const authenticateUser = (usernameOrEmail, password) => {

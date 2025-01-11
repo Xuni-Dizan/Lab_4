@@ -1,0 +1,221 @@
+/* Thiết lập chung */
+main{
+    margin-top: 50px;
+}
+.profile-banner {
+    background: linear-gradient(135deg, #6200ea, #b388ff);
+    padding: 40px 0;
+    margin: 0 0 30px 0;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(98, 0, 234, 0.15);
+}
+
+.profile-banner h2 {
+    font-size: 2.8rem;
+    color: white;
+    margin: 0 0 20px 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.edit-profile {
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    border: 2px solid white;
+    padding: 12px 30px;
+    border-radius: 25px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(5px);
+}
+
+.edit-profile:hover {
+    background: white;
+    color: #6200ea;
+    transform: translateY(-2px);
+}
+
+/* Profile Details Section */
+.profile-details {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.profile-info, .profile-courses {
+    padding: 25px;
+    background: #f8f9ff;
+    border-radius: 15px;
+    transition: transform 0.3s ease;
+}
+
+.profile-info:hover, .profile-courses:hover {
+    transform: translateY(-5px);
+}
+
+.profile-info h3, .profile-courses h3 {
+    color: #6200ea;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #e0e0ff;
+    padding-bottom: 10px;
+}
+
+.profile-info p {
+    margin: 15px 0;
+    font-size: 1.1rem;
+    color: #444;
+    display: flex;
+    align-items: center;
+}
+
+.profile-info strong {
+    min-width: 140px;
+    color: #6200ea;
+}
+
+/* Courses List */
+.profile-courses ul {
+    display: grid;
+    gap: 15px;
+}
+
+.profile-courses li {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid #e0e0ff;
+    transition: all 0.3s ease;
+}
+
+.profile-courses li:hover {
+    border-color: #6200ea;
+    box-shadow: 0 5px 15px rgba(98, 0, 234, 0.1);
+}
+
+.profile-courses h4 {
+    color: #333;
+    margin: 0;
+    font-size: 1.1rem;
+}
+
+.profile-courses button {
+    background: #6200ea;
+    color: white;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.profile-courses button:hover {
+    background: #7c4dff;
+    transform: translateX(5px);
+}
+
+/* Edit Form Styling */
+.edit-profile-form {
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    margin: 30px 0;
+}
+
+.edit-profile-form h3 {
+    color: #6200ea;
+    margin-bottom: 25px;
+    font-size: 1.8rem;
+}
+
+.edit-profile-form form {
+    display: grid;
+    gap: 20px;
+}
+
+.edit-profile-form label {
+    font-weight: 500;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.edit-profile-form input {
+    padding: 12px 15px;
+    border: 2px solid #e0e0ff;
+    border-radius: 10px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.edit-profile-form input:focus {
+    border-color: #6200ea;
+    outline: none;
+}
+
+.edit-profile-form .btn {
+    padding: 12px 25px;
+    border-radius: 25px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.edit-profile-form .btn[type="submit"] {
+    background: #6200ea;
+    color: white;
+    border: none;
+}
+
+.edit-profile-form .btn.cancel {
+    background: #f5f5f5;
+    color: #333;
+    border: 2px solid #ddd;
+}
+
+.edit-profile-form .btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Back to Top Button */
+.back-to-top {
+    background: #6200ea;
+    color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    box-shadow: 0 5px 15px rgba(98, 0, 234, 0.3);
+    transition: all 0.3s ease;
+}
+
+.back-to-top:hover {
+    background: #7c4dff;
+    transform: translateY(-5px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .profile-details {
+        grid-template-columns: 1fr;
+    }
+    
+    .profile-banner h2 {
+        font-size: 2rem;
+    }
+    
+    .edit-profile-form {
+        padding: 20px;
+    }
+}

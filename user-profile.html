@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hồ Sơ Người Dùng - Học Tập Trực Tuyến</title>
-    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/user-profile.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
     <style>
@@ -101,23 +102,37 @@
 <body>
     <header>
         <div class="header-container">
-            <div class="profile-container">
-                <a href="user-profile.html">
-                    <img src="./assets/images/avatar.jpg" alt="Avatar" class="avatar" style="border-radius: 50%; width: 60px; height: 60px;">
+            <div class="logo-container">
+                <a href="index.html">
+                    <img src="./assets/images/logo.png" alt="Logo" class="logo">
                 </a>
-                <span class="welcome-text">Welcome, Nguyen Xuan Dai</span>
             </div>
-            <div class="tabs-container">
-                <a href="index.html" class="tab">Home</a>
-                <a href="news.html" class="tab">News</a>
-                <a href="about.html" class="tab">About</a>
-                <a href="contact.html" class="tab">Contact</a>
-            </div>
-            <div class="button-login">
-                <a href="login.html" class="btn">Login</a>
+            <nav class="main-navigation">
+                <ul class="nav-links">
+                    <li><a href="index.html" class="nav-item">Home</a></li>
+                    <li><a href="news.html" class="nav-item">News</a></li>
+                    <li><a href="about.html" class="nav-item">About</a></li>
+                    <li><a href="contact.html" class="nav-item">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="search-login-container">
+                <div class="search-container">
+                    <input type="text" placeholder="Tìm kiếm khóa học..." aria-label="Search">
+                    <button type="submit">Search</button>
+                </div>
+                <div class="profile-login">
+                    <a href="user-profile.html" class="profile-link">
+                        <img src="./assets/images/avatar.jpg" alt="Avatar" class="avatar">
+                    </a>
+                    <a href="login.html" class="btn login-btn">Login</a>
+                </div>
+                <div class="theme-toggle">
+                    <input type="checkbox" id="theme-toggle-input">
+                    <label class="slider" for="theme-toggle-input" onclick="initThemeToggle()"></label>
+                </div>
             </div>
         </div>
-        <nav class="navbar">
+        <nav class="secondary-navigation">
             <ul>
                 <li><a href="#business">Quản Lý Doanh Nghiệp</a></li>
                 <li><a href="#cloud">Điện Toán Đám Mây</a></li>
@@ -182,19 +197,50 @@
     </main>
 
     <footer>
-        <div class="contact-info">
-            <p>Địa chỉ: 123 Đường ABC, Thành phố XYZ</p>
-            <p>Số điện thoại: 0123 456 789</p>
-            <p>
-                <a href="#">Facebook</a> |
-                <a href="#">Instagram</a>
-            </p>
+        <div class="footer-container">
+            <div class="footer-section about">
+                <h2>Học Tập Trực Tuyến</h2>
+                <p>
+                    Học Tập Trực Tuyến là nền tảng học trực tuyến hàng đầu, mang đến các khóa học chất lượng cao từ các giảng viên uy tín trên toàn thế giới.
+                </p>
+                <div class="socials">
+                    <a href="https://facebook.com" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://twitter.com" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="https://instagram.com" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://linkedin.com" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+    
+            <div class="footer-section links">
+                <h2>Quick Links</h2>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="news.html">News</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="user-profile.html">User Profile</a></li>
+                </ul>
+            </div>
+    
+            <div class="footer-section contact-form">
+                <h2>Subscribe Newsletter</h2>
+                <form action="#" method="POST">
+                    <input type="email" name="email" placeholder="Enter your email..." required>
+                    <button type="submit">Send</button>
+                </form>
+                <p class="newsletter-note">Receive updates and special offers from us.</p>
+            </div>
+    
+            <div class="footer-section contact-info">
+                <h2>Contact Information</h2>
+                <p><i class="fas fa-map-marker-alt"></i> Address: 123 Đường ABC, Thành phố XYZ</p>
+                <p><i class="fas fa-phone-alt"></i> Phone: 0123 456 789</p>
+                <p><i class="fas fa-envelope"></i> Email: support@hoctaptructuyen.vn</p>
+            </div>
         </div>
-        <div class="footer-links">
-            <a href="#">Chính sách bảo mật</a>
-            <a href="#">Điều khoản dịch vụ</a>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Học Tập Trực Tuyến. All rights reserved.</p>
         </div>
-        <p>&copy; 2024 Học Tập Trực Tuyến. Tất cả quyền được bảo lưu.</p>
     </footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>

@@ -239,3 +239,77 @@ forgotPasswordLink.onclick = function(event) {
 // });
 
 // updateSlider();
+
+function toggleMobileMenu() {
+    const mainNav = document.querySelector('.main-navigation');
+    const mobileMenuIcon = document.querySelector('.mobile-menu-icon');
+    mainNav.classList.toggle('active');
+    mobileMenuIcon.classList.toggle('open');
+}
+// ... các script hiện tại ...
+
+document.addEventListener('DOMContentLoaded', (event) => {
+    const themeToggle = document.getElementById('theme-toggle');
+    const body = document.body;
+    const darkModeClass = 'dark-mode';
+    const savedTheme = localStorage.getItem('theme');
+
+    if (savedTheme === 'dark') {
+        body.classList.add(darkModeClass);
+        if (themeToggle) {
+            themeToggle.checked = true;
+        }
+    }
+
+    if (themeToggle) {
+        themeToggle.addEventListener('change', () => {
+            body.classList.toggle(darkModeClass);
+            const isDarkMode = body.classList.contains(darkModeClass);
+            localStorage.setItem('theme', isDarkMode ? 'dark' : 'light');
+        });
+    }
+});
+
+function initThemeToggle() {
+    const themeToggleInput = document.getElementById('theme-toggle-input');
+    const savedTheme = localStorage.getItem('theme');
+    const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+
+    // Thiết lập trạng thái ban đầu
+    if (savedTheme === 'dark' || (!savedTheme && prefersDarkScheme.matches)) {
+        document.body.classList.add('dark-mode');
+        themeToggleInput.checked = true;
+    }
+
+    // Xử lý sự kiện thay đổi theme
+    themeToggleInput.addEventListener('change', function() {
+        if (this.checked) {
+            document.body.classList.add('dark-mode');
+            localStorage.setItem('theme', 'dark');
+            toastr.success('Đã chuyển sang chế độ tối');
+        } else {
+            document.body.classList.remove('dark-mode');
+            localStorage.setItem('theme', 'light');
+            toastr.success('Đã chuyển sang chế độ sáng');
+        }
+    });
+
+    // Xử lý thay đổi theme hệ thống
+    prefersDarkScheme.addEventListener('change', function(e) {
+        if (!localStorage.getItem('theme')) {
+            if (e.matches) {
+                document.body.classList.add('dark-mode');
+                themeToggleInput.checked = true;
+            } else {
+                document.body.classList.remove('dark-mode');
+                themeToggleInput.checked = false;
+            }
+        }
+    });
+}
+
+// Thêm vào DOMContentLoaded
+document.addEventListener('DOMContentLoaded', function() {
+    // ... existing code ...
+    initThemeToggle();
+});
